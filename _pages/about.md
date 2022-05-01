@@ -7,8 +7,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
-# Hey, I'm Raphaël 👋 
+# Hey, I'm Raphaël <span class="wave">👋</span> 
 Master Student in **Data Science**, **Machine Learning** and **Computer Vision**.<br>
+
 
 ---
 
