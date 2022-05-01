@@ -8,13 +8,13 @@ main:
     url: /year-archive/
 
   - title: "Machine Learning"
-    url: /tags/#machine-learning
+    url: /machine-learning
 
   - title: "Computer Vision"
-    url: /tags/#computer-vision
+    url: /computer-vision
 
   - title: "Data Science"
-    url: /tags/#data-science
+    url: /data-science
 
 
 
