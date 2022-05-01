@@ -18,7 +18,7 @@ Master Student in **Data Science**, **Machine Learning** and **Computer Vision**
 
 ## Highlights 🌟
 → Research intern at NEC Laboratories America in Princeton, working on Medical Machine Learning for cancer detection.<br>
-→ [Publication](/publications/) in the *Journal of Physics* and presentation at the CISBAT 2021 for deep-learning on satellite images for rooftop detection. <br>
+→ [Publication](/publications/) in the *Journal of Physics* and conference at the CISBAT 2021 for deep-learning on satellite images for rooftop detection. <br>
 → [References](/files/recommendation.pdf) from Prof. Jaggi, professor of Machine Learning at EPFL.
 
 <br><br>
