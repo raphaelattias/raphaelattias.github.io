@@ -11,3 +11,4 @@ tags:
 
 <img src='/images/ganwriting.png'>
 
+[Paper](https://arxiv.org/abs/2003.02567){: .btn .btn--primary} 
