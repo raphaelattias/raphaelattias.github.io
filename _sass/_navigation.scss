@@ -28,6 +28,10 @@
     max-width: $x-large;
   }
 
+  .greedy-nav .visible-links a:before {
+    background-color: red;
+  }
+
   ol {
     padding: 0;
     list-style: none;
@@ -232,7 +236,8 @@
         left: 0;
         bottom: 0;
         height: 4px;
-        background: mix(#fff, $primary-color, 50%);
+        //background: mix(#fff, $primary-color, 50%);
+        background: mix(#0668E1, $primary-color, 50%);
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
