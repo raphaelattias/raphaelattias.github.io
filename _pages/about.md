@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: " "
-excerpt: "test"
+excerpt: "Raphaël Attias website & portfolio"
 author_profile: true
 redirect_from: 
   - /about/
