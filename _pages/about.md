@@ -23,4 +23,4 @@ Master Student in **Data Science**, **Machine Learning** and **Computer Vision**
 → [References](/files/recommendation.pdf) from Prof. Jaggi, professor of Machine Learning at EPFL.
 
 <br><br>
-[Contact me](mailto:raphael.attias@epfl.ch){: .btn .btn--info .btn--large}{: .text-center}
+[Contact me](mailto:raphael.attias@epfl.ch){: .btn .btn--primary .btn--large}{: .text-center}
