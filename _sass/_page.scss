@@ -20,7 +20,7 @@
   @include breakpoint($large) {
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    @include suffix(1.5 of 12);
   }
 
   .page__inner-wrap {
@@ -73,7 +73,7 @@
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: None;
 
     &:hover {
       text-decoration: underline;
@@ -105,6 +105,17 @@
     margin-top: -1.5em;
     padding-left: 1.25rem;
   }
+}
+
+.wave-emoji {
+  -webkit-animation-duration: 1.8s;
+  animation-duration: 1.8s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: wave;
+  animation-name: wave;
+  display: inline-block;
+  transform-origin: 70% 70%;
 }
 
 .page__hero {

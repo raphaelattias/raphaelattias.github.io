@@ -13,5 +13,7 @@ Master Student in **Data Science**, **Machine Learning** and **Computer Vision**
 ---
 
 ↳ Proficient in software development, research and applied sciences.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I think this is the best you're gonna get.<br>
-↳ best <br>
+↳ 15+ [projects](/year-archive/) in Python and Scala using scientific libraries, Pytorch, Tensorflow, Spark, Scikit, etc. <br>
+↳ Master in Data Science, with professional and research experience in Machine Learning, Deep Learning and Computer Vision.
+
+&emsp;&ensp;&ensp;.<br>
