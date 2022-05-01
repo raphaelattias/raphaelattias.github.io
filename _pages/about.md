@@ -14,6 +14,12 @@ Master Student in **Data Science**, **Machine Learning** and **Computer Vision**
 
 ↳ Proficient in software development, research and applied sciences.<br>
 ↳ 15+ [projects](/year-archive/) in Python and Scala using scientific libraries, Pytorch, Tensorflow, Spark, Scikit, etc. <br>
-↳ Master in Data Science, with professional and research experience in Machine Learning, Deep Learning and Computer Vision.
+↳ Looking for opportunities in Machine Learning, Data Science and Computer Visions. 
 
-&emsp;&ensp;&ensp;.<br>
+## Highlights 🌟
+→ Research intern at NEC Laboratories America in Princeton, working on Medical Machine Learning for cancer detection.<br>
+→ [Publication](/publications/) in the *Journal of Physics* and presentation at the CISBAT 2021 for deep-learning on satellite images for rooftop detection. <br>
+
+
+<br><br>
+[Contact me](mailto:raphael.attias@epfl.ch){: .btn .btn--info .btn--large}{: .text-center}
