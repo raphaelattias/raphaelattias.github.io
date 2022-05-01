@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Raphaël Attias"
   avatar           : "profile.png"
-  bio              : "Research Intern @ NEC Laboratories, with a Master Student in Data Science from EPFL."
+  bio              : "Research Intern @ NEC Laboratories, with a Master in Data Science and Bachelor in Mathematics from EPFL.<hr>"
   location         : "Princeton, NJ"
-  employer         :
+  employer         :  "NEC Laboratories"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=TJ5Nc2wAAAAJ&hl=en&oi=ao"
   email            :  "raphael.attias@outlook.com"
