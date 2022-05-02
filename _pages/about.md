@@ -10,7 +10,6 @@ redirect_from:
 # Hey, I'm Raphaël <span class="wave">👋</span> 
 Master Student in **Data Science**, **Machine Learning** and **Computer Vision**.<br>
 
-
 ---
 
 ↳ Proficient in software development, research and applied sciences.<br>
@@ -24,3 +23,4 @@ Master Student in **Data Science**, **Machine Learning** and **Computer Vision**
 
 <br><br>
 [Contact me](mailto:raphael.attias@epfl.ch){: .btn .btn--primary .btn--large}{: .text-center}
+
