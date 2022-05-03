@@ -2,7 +2,7 @@
 title: "MATH-101(b) Calculus I"
 collection: teaching
 type: "Undegraduate course"
-permalink: /teaching/bouffa
+permalink: /teachings/bouffa
 venue: "EPFL, Math Department"
 date: 2021-01-01
 location: "Lausanne, Switzerland"

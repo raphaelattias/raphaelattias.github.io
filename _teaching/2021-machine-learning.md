@@ -2,7 +2,7 @@
 title: "CS-433 Machine Learning"
 collection: teaching
 type: "Graduate course"
-permalink: /teaching/machine-learning
+permalink: /teachings/machine-learning
 venue: "EPFL, CS Department"
 date: 2021-01-01
 location: "Lausanne, Switzerland"

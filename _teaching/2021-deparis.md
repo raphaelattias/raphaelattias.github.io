@@ -2,7 +2,7 @@
 title: "MATH-251 Numerical Analysis"
 collection: teaching
 type: "Undegraduate course"
-permalink: /teaching/dubuis
+permalink: /teachings/dubuis
 venue: "EPFL, Math Department"
 date: 2021-01-01
 location: "Lausanne, Switzerland"
