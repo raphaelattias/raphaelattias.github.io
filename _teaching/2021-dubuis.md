@@ -1,5 +1,5 @@
 ---
-title: "PREPA-003 Calculus I Teacher Assistant"
+title: "PREPA-003 Calculus I"
 collection: teaching
 type: "Undegraduate course"
 permalink: /teaching/dubuis

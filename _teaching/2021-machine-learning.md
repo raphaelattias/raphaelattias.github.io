@@ -1,5 +1,5 @@
 ---
-title: "CS-433 Machine Learning Teacher Assistant"
+title: "CS-433 Machine Learning"
 collection: teaching
 type: "Graduate course"
 permalink: /teaching/machine-learning

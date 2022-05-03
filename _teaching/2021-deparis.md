@@ -1,5 +1,5 @@
 ---
-title: "MATH-251 Numerical Analysis Teacher Assistant"
+title: "MATH-251 Numerical Analysis"
 collection: teaching
 type: "Undegraduate course"
 permalink: /teaching/dubuis

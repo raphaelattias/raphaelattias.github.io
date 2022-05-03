@@ -1,5 +1,5 @@
 ---
-title: "MATH-101(b) Calculus I Teacher Assistant"
+title: "MATH-101(b) Calculus I"
 collection: teaching
 type: "Undegraduate course"
 permalink: /teaching/bouffa

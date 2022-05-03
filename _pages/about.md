@@ -14,7 +14,7 @@ Master Student in **Data Science**, **Machine Learning** and **Computer Vision**
 
 ↳ Proficient in software development, research and applied sciences.<br>
 ↳ 15+ [projects](/year-archive/) in Python and Scala using scientific libraries, Pytorch, Tensorflow, Spark, Scikit, etc. <br>
-↳ Looking for opportunities starting in August 2022 in Machine Learning, Data Science and Computer Visions. 
+↳ Looking for opportunities starting in August 2022 in Machine Learning, Computer Vision and Data Science. 
 
 ## Highlights 🌟
 → Research intern at NEC Laboratories America in Princeton, working on Medical Machine Learning for cancer detection.<br>
