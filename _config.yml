@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Raphaël Attias"
+title                    : "Raphaël Attias's website and portfolio"
 title_separator          : "-"
 name                     : &name "Raphaël Attias"
 description              : &description "Research Intern @ NEC Laboratories 🇺🇸. Master Student in Data Science from EPFL 🇨🇭."
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :  "https://www.linkedin.com/in/raphael-attias/"
+  linkedin         :  "raphael-attiasx"
   orcid            : 
   pinterest        :
   soundcloud       :
