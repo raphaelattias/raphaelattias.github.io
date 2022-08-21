@@ -4,7 +4,7 @@ Hi 👋 My name is Raphael Attias
 Machine Learning and Data Science EPFL Master Student
 -----------------------------------------------------
 
-I am a Master Student in Data Science and Machine Learning from EPFL, Switzerland. Working in the field of Medical Machine Learning, I have done more than 15+ projects using scientific libraries such as Pytorch, Scikit, Tensorflow etc. Starting in September 2022, I will be working at Harvard Medical School in the Department of Biomedical Informatics to complete my degree.
+I am a Master Student in Data Science and Machine Learning from EPFL, Switzerland. Working in the field of Medical Machine Learning, I have done more than 15+ projects using scientific libraries such as Pytorch, Scikit, Tensorflow etc. Starting in February 2023, I will be working at Harvard Medical School in the Department of Biomedical Informatics to complete my degree.
 
 * 🌍  I'm based in Princeton, New Jersey
 * 🖥️  See my portfolio at [Raphaël Attias Portfolio](http://raphaelattias.com)
