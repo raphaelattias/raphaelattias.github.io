@@ -22,6 +22,6 @@ Master Student in **Data Science**, **Machine Learning** and **Computer Vision**
 → [Publication](/publications/) in the *Journal of Physics* and conference at the CISBAT 2021 for deep-learning on satellite images for rooftop detection. <br>
 → [References](/files/recommendation_jaggi.pdf) from Dr. Cosatto, Senior Researcher at NEC Laboratories America.<br>
 → [References](/files/recommendation_jaggi.pdf) from Prof. Jaggi, Professor of Machine Learning at EPFL.
-<br>
+<br><br>
 [Contact me](mailto:raphael.attias@outlook.com){: .btn .btn--primary .btn--large}{: .text-center}
 
