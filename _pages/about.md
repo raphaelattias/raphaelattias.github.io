@@ -20,9 +20,8 @@ Master Student in **Data Science**, **Machine Learning** and **Computer Vision**
 → Visiting Postgraduate Researcher Fellow at Harvard, working on Machine Learning empowered pathology detection.<br>
 → Ex-Research intern at NEC Laboratories America in Princeton, working on Medical Machine Learning for cancer detection.<br>
 → [Publication](/publications/) in the *Journal of Physics* and conference at the CISBAT 2021 for deep-learning on satellite images for rooftop detection. <br>
-→ [References](/files/recommendation_jaggi.pdf) from Dr. Cosatto, Senior Researcher at NEC Laboratories America.
+→ [References](/files/recommendation_jaggi.pdf) from Dr. Cosatto, Senior Researcher at NEC Laboratories America.<br>
 → [References](/files/recommendation_jaggi.pdf) from Prof. Jaggi, Professor of Machine Learning at EPFL.
-
-<br><br>
+<br>
 [Contact me](mailto:raphael.attias@outlook.com){: .btn .btn--primary .btn--large}{: .text-center}
 
