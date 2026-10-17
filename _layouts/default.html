@@ -46,6 +46,7 @@
       <img src="{{ '/images/cathy.jpg' | relative_url }}" alt="A photo from Raphaël’s collection" loading="lazy" width="3024" height="4032">
       <p class="photo-dialog__caption" hidden></p>
     </dialog>
+    {% if page.layout == 'home' %}<script src="{{ '/assets/js/home-entrance.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
     <script src="{{ '/assets/js/easter-egg.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   </body>
 </html>

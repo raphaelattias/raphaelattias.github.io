@@ -899,9 +899,9 @@ html:has(.photo-dialog[open]) {
 }
 
 @media screen {
-  /* Keyboard focus should reveal links immediately. */
-  .home-page:focus-within .home-title,
-  .home-page:focus-within .prose > p {
+  /* Once focus reveals the biography, keep it visible after focus moves away. */
+  .home-page.entrance-complete .home-title,
+  .home-page.entrance-complete .prose > p {
     animation: none;
   }
 }
