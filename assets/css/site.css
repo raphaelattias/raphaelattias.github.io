@@ -60,6 +60,21 @@ body {
   color: var(--site-heading);
 }
 
+/* A native cursor keeps the pointer responsive without a JavaScript follower. */
+@media (hover: hover) and (pointer: fine) {
+  html {
+    cursor: url("../cursor.svg") 2 2, auto;
+  }
+
+  a,
+  button,
+  [role="button"],
+  summary,
+  button.photo-dialog__close {
+    cursor: url("../cursor.svg") 2 2, pointer;
+  }
+}
+
 a {
   color: var(--site-heading);
   text-decoration-thickness: 1px;
