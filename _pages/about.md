@@ -15,4 +15,4 @@ Previously, I worked on Databricks Workflows and Jobs in Amsterdam. Before that,
 
 I hold a master’s in Data Science and a bachelor’s in Mathematics from [EPFL](https://www.epfl.ch/). My work has taken me from distributed learning to computer vision and software engineering. You can explore my [projects]({{ '/year-archive/' | relative_url }}), read my [research]({{ '/publications/' | relative_url }}), or [get in touch](mailto:raphael.attias@outlook.com).
 
-I also have [two]({{ '/images/cat-one.jpg' | relative_url }} "Meet one of my cats") [cats]({{ '/images/cat-two.jpg' | relative_url }} "Meet my other cat").
+I also have <a href="{{ '/images/cat-one.jpg' | relative_url }}" title="Meet one of my cats" aria-haspopup="dialog" aria-controls="easter-egg-dialog" data-photo-alt="My first cat, a tabby looking into the camera">two</a> <a href="{{ '/images/cat-two.jpg' | relative_url }}" title="Meet my other cat" aria-haspopup="dialog" aria-controls="easter-egg-dialog" data-photo-alt="My second cat, a tabby with a white face, looking into the camera">cats</a>.

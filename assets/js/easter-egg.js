@@ -1,12 +1,18 @@
 (() => {
-  const trigger = document.querySelector('.site-easter-egg');
   const dialog = document.querySelector('#easter-egg-dialog');
-  if (!trigger || !dialog || typeof dialog.showModal !== 'function') return;
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  const image = dialog.querySelector('img');
+  if (!image) return;
 
-  trigger.addEventListener('click', (event) => {
-    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    event.preventDefault();
-    if (!dialog.open) dialog.showModal();
+  document.querySelectorAll('a[aria-controls="easter-egg-dialog"]').forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      image.src = trigger.href;
+      image.alt = trigger.dataset.photoAlt || 'A photo from Raphaël’s collection';
+      dialog.setAttribute('aria-label', trigger.dataset.photoAlt ? 'Cat photo' : 'Hidden photo');
+      if (!dialog.open) dialog.showModal();
+    });
   });
 
   dialog.addEventListener('click', (event) => {
