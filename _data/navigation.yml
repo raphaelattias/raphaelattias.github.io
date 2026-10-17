@@ -1,24 +1,7 @@
-# main links links
 main:
-
-  - title: "Publications"
-    url: /publications/
-
-  - title: "All Projects"
+  - title: "projects"
     url: /year-archive/
-
-  - title: "Machine Learning"
-    url: /machine-learning
-
-  - title: "Computer Vision"
-    url: /computer-vision
-
-  - title: "Data Science"
-    url: /data-science
-
-  - title: "Teaching"
-    url: /teaching/    
-
-  - title: "CV"
-    url: /files/cv.pdf
-    
+  - title: "publications"
+    url: /publications/
+  - title: "cv"
+    url: /cv/

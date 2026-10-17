@@ -2,23 +2,16 @@
 layout: default
 ---
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
+{% assign archive_title = page.title | strip %}
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
+<article class="content-page archive-page" itemscope itemtype="http://schema.org/CollectionPage">
+  {% if archive_title != empty %}
+    <header class="page-header archive-header">
+      <h1 class="page-title" itemprop="headline">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+    </header>
+  {% endif %}
 
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 class="page__title">{{ page.title }}</h1>
-    {% endunless %}
+  <div class="prose archive-content page__content" itemprop="mainContentOfPage">
     {{ content }}
   </div>
-</div>
+</article>

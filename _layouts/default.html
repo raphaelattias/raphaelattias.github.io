@@ -1,31 +1,48 @@
 ---
-layout: compress
 ---
 
-{% include base_path %}
-
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+<html lang="{{ site.locale | default: 'en' | slice: 0, 2 }}">
   <head>
-    {% include head.html %}
-    {% include head/custom.html %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include seo.html %}
+    {% assign feed_path = site.atom_feed.path | default: '/feed.xml' %}
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }} Feed" href="{{ feed_path | relative_url }}">
+    <link rel="icon" href="{{ "/assets/favicon.svg" | relative_url }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-brand" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>@raphaelattias</a>
+        <ul class="site-nav__links">
+          {% for item in site.data.navigation.main %}
+            <li>
+              <a href="{{ item.url | relative_url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
 
-    {{ content }}
+    <main id="main-content" class="site-main">
+      {{ content }}
+    </main>
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
+    <footer class="site-footer">
+      <p class="site-footer__copyright">{{ site.author.name | default: site.name | default: site.title }} &copy; {{ site.time | date: '%Y' }} <a class="site-easter-egg" href="{{ '/images/cathy.jpg' | relative_url }}" aria-label="View a hidden photo" aria-haspopup="dialog" aria-controls="easter-egg-dialog">🪴</a></p>
+      {% include site-social.html %}
+    </footer>
+    <dialog id="easter-egg-dialog" class="photo-dialog" aria-label="Hidden photo">
+      <form method="dialog">
+        <button class="photo-dialog__close" aria-label="Close photo" autofocus>&times;</button>
+      </form>
+      <img src="{{ '/images/cathy.jpg' | relative_url }}" alt="A photo from Raphaël’s collection" loading="lazy" width="3024" height="4032">
+    </dialog>
+    <script src="{{ '/assets/js/easter-egg.js' | relative_url }}" defer></script>
   </body>
 </html>

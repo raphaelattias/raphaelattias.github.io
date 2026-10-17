@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Raphaël Attias"
 title_separator          : "-"
 name                     : &name "Raphaël Attias"
-description              : &description "Research Intern @ NEC Laboratories 🇺🇸. Master Student in Data Science from EPFL 🇨🇭."
+description              : &description "Software engineer at Databricks in New York, building CustomerLake, a customer data platform (CDP). Background in machine learning and mathematics."
 url                      : https://raphaelattias.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "raphaelattias/raphaelattias.github.io"
@@ -66,9 +66,12 @@ og_image                 :  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
+  type                   : Person
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links:
+    - https://github.com/raphaelattias
+    - https://www.linkedin.com/in/raphael-attias
+    - https://scholar.google.com/citations?user=TJ5Nc2wAAAAJ
 
 
 # Analytics
@@ -82,8 +85,8 @@ analytics:
 author:
   name             : "Raphaël Attias"
   avatar           : "photo_cv_2.jpg"
-  bio              : "Software Engineer @ Databricks || Visiting Postgraduate Researcher @ Harvard || MS in Data Science and BS in Mathematics from EPFL.<hr>"
-  location         : "Amsterdam, NL"
+  bio              : "Software engineer at Databricks in New York, working on CustomerLake (CDP). Previously a researcher at Harvard. M.S. in Data Science and B.S. in Mathematics from EPFL."
+  location         : "New York, NY"
   employer         :  "Databricks"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=TJ5Nc2wAAAAJ&hl=en&oi=ao"

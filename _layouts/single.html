@@ -2,89 +2,91 @@
 layout: default
 ---
 
-{% include base_path %}
+{% assign page_title = page.title | markdownify | remove: '<p>' | remove: '</p>' | strip %}
+{% assign page_title_plain = page.title | markdownify | strip_html | strip_newlines | escape %}
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
-    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
-
-    <div class="page__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
-          {% if page.read_time %}
-            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
-          {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
-        
-        {% if page.collection == 'teaching' %}
-          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.venue and page.date %}
-          <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
-        
-             
-        {% if page.citation and page.paperurl %}
-          <p>Recommended citation: {{ page.citation }} <a href="{{ page.paperurl }}"><u>{{ page.paperurl }}</u></a></p>
-        {% elsif page.citation %}
-          <p>Recommended citation: {{ page.citation }} </p>
-        {% endif %}
-    
-        </header>
-      {% endunless %}
-
-      <section class="page__content" itemprop="text">
-        {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
-      </section>
-
-      <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
-        {% endif %}
-        {% include page__taxonomy.html %}
-      </footer>
-
-      {% if page.share %}{% include social-share.html %}{% endif %}
-
-      {% include post_pagination.html %}
-    </div>
-
-    {% if site.comments.provider and page.comments %}
-      {% include comments.html %}
-    {% endif %}
-  </article>
-
-  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
-  {% if page.id and page.related and site.related_posts.size > 0 %}
-    <div class="page__related">
-      {% if site.data.ui-text[site.locale].related_label %}
-        <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
-      {% endif %}
-      <div class="grid__wrapper">
-        {% for post in site.related_posts limit:4 %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
-      </div>
-    </div>
+<article class="content-page single-page" itemscope itemtype="http://schema.org/CreativeWork">
+  {% if page_title != empty %}
+    <meta itemprop="headline" content="{{ page_title_plain }}">
   {% endif %}
-</div>
+  {% if page.excerpt %}
+    <meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape }}">
+  {% endif %}
+  {% if page.date %}
+    <meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">
+  {% endif %}
+  {% if page.modified %}
+    <meta itemprop="dateModified" content="{{ page.modified | date_to_xmlschema }}">
+  {% endif %}
+
+  {% if page_title != empty %}
+    <header class="page-header">
+      <h1 class="page-title" itemprop="headline">{{ page_title }}</h1>
+
+      <div class="page-meta" aria-label="Publication details">
+        {% if page.collection == 'talks' or page.talk_type %}
+          <p class="page-meta__line">
+            <span>{{ page.talk_type | default: 'Talk' }}</span>{% if page.venue %}<span> at <i>{{ page.venue }}</i></span>{% endif %}{% if page.location %}<span>, {{ page.location }}</span>{% endif %}{% if page.date %}<span>, <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y' }}</time></span>{% endif %}
+          </p>
+        {% elsif page.collection == 'teaching' and page.venue %}
+          <p class="page-meta__line">{{ page.type | default: 'Teaching' }}, <i>{{ page.venue }}</i>{% if page.date %}, <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y' }}</time>{% endif %}</p>
+        {% elsif page.venue and page.date %}
+          <p class="page-meta__line">Published in <i>{{ page.venue }}</i>, <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y' }}</time></p>
+        {% elsif page.date %}
+          <p class="page-meta__line">Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time></p>
+        {% elsif page.modified %}
+          <p class="page-meta__line">Updated <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date: '%B %d, %Y' }}</time></p>
+        {% endif %}
+
+        {% if page.read_time %}
+          <p class="page-meta__line page-meta__reading-time">{% include read-time.html %}</p>
+        {% endif %}
+      </div>
+
+      {% if page.citation or page.paperurl %}
+        <p class="page-citation">
+          {% if page.citation %}<strong>Recommended citation:</strong> {{ page.citation }}{% endif %}
+          {% if page.paperurl %}{% if page.citation %} {% endif %}<a href="{{ page.paperurl | escape }}">View paper</a>{% endif %}
+        </p>
+      {% endif %}
+    </header>
+  {% endif %}
+
+  <section class="prose page__content" itemprop="text">
+    {{ content }}
+    {% if page.link %}
+      <p><a class="btn" href="{{ page.link | escape }}">{{ site.data.ui-text[site.locale].ext_link_label | default: 'Direct link' }}</a></p>
+    {% endif %}
+  </section>
+
+  {% if page.tags or page.categories %}
+    <footer class="page-taxonomy">
+      {% include page__taxonomy.html %}
+    </footer>
+  {% endif %}
+
+  {% if page.share %}
+    {% include social-share.html %}
+  {% endif %}
+
+  {% if page.previous or page.next %}
+    <nav class="page-nav" aria-label="Post navigation">
+      {% if page.previous %}
+        <a class="page-nav__link page-nav__link--previous" href="{{ page.previous.url | relative_url }}" rel="prev">
+          <span class="page-nav__label">{{ site.data.ui-text[site.locale].pagination_previous | default: 'Previous' }}</span>
+          <span class="page-nav__title">{{ page.previous.title | markdownify | strip_html }}</span>
+        </a>
+      {% endif %}
+      {% if page.next %}
+        <a class="page-nav__link page-nav__link--next" href="{{ page.next.url | relative_url }}" rel="next">
+          <span class="page-nav__label">{{ site.data.ui-text[site.locale].pagination_next | default: 'Next' }}</span>
+          <span class="page-nav__title">{{ page.next.title | markdownify | strip_html }}</span>
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
+
+  {% if site.comments.provider and page.comments %}
+    {% include comments.html %}
+  {% endif %}
+</article>

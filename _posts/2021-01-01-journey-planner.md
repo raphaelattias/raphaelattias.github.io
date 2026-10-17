@@ -1,7 +1,7 @@
 ---
 title: 'Robust Journey Planning for CFF Zurich'
 date: 2021-01-01
-permalink: /posts/2014/08/adahessian/
+permalink: /posts/2021/01/journey-planner/
 tags:
   - Data Science
 ---

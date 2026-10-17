@@ -1,28 +1,18 @@
 ---
+layout: home
 permalink: /
-title: " "
-excerpt: "Raphaël Attias website & portfolio"
-author_profile: true
-redirect_from: 
+title: "Raphaël Attias"
+excerpt: "Software engineer at Databricks in New York, building CustomerLake, a customer data platform (CDP). Background in machine learning and mathematics."
+author_profile: false
+redirect_from:
   - /about/
   - /about.html
+  - /me/
 ---
-# Hey, I'm Raphaël <span class="wave">👋</span> 
-Software Engineer at Databricks<br>
+I’m a software engineer at [Databricks](https://www.databricks.com/), based in New York. I work on [CustomerLake](https://www.databricks.com/product/customerlake-cdp), Databricks’ customer data platform (CDP), building features across data ingestion, modeling, audience creation, integrations, and campaign execution.
 
----
+Previously, I worked on Databricks Workflows and Jobs in Amsterdam. Before that, I was a visiting postgraduate researcher at [Harvard](https://dbmi.hms.harvard.edu/), where I explored machine learning for high-resolution pathology images. I also worked on medical machine learning at [NEC Laboratories America](https://www.nec-labs.com/), from image segmentation to data augmentation.
 
-↳ Proficient in software development, research and applied sciences<br>
-↳ 15+ [projects](/year-archive/) in Python and Scala using scientific libraries, Pytorch, Spark, Docker, REST, etc. <br>
+I hold a master’s in Data Science and a bachelor’s in Mathematics from [EPFL](https://www.epfl.ch/). My work has taken me from distributed learning to computer vision and software engineering. You can explore my [projects]({{ '/year-archive/' | relative_url }}), read my [research]({{ '/publications/' | relative_url }}), or [get in touch](mailto:raphael.attias@outlook.com).
 
-
-## Highlights 🌟
-→ Software Engineer at Databricks.<br>
-→ Visiting Postgraduate Researcher Fellow at Harvard, working on Machine Learning empowered pathology detection<br>
-→ [Master Thesis](/files/thesis.pdf) at Harvard on Vision Transformers for Analyzing High-Resolution Pathology Images<br>
-→ [Publication](/publications/) in the *Journal of Physics* and conference at the CISBAT 2021 for deep-learning on satellite images for rooftop detection<br>
-→ [References](/files/recommendation_cosatto.pdf) from Dr. Cosatto, Senior Researcher at NEC Laboratories America<br>
-→ [References](/files/recommendation_jaggi.pdf) from Prof. Jaggi, Professor of Machine Learning at EPFL
-<br><br>
-[Contact me](mailto:raphael.attias@outlook.com){: .btn .btn--primary .btn--large}{: .text-center}
-
+I also have [two]({{ '/images/cat-one.jpg' | relative_url }} "Meet one of my cats") [cats]({{ '/images/cat-two.jpg' | relative_url }} "Meet my other cat").

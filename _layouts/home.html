@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<article class="content-page home-page" itemscope itemtype="http://schema.org/WebPage">
+  {% assign home_title = page.title | strip %}
+  {% if home_title != empty %}
+    <h1 class="page-title home-title" itemprop="headline">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+  {% endif %}
+
+  <div class="prose page__content" itemprop="text">
+    {{ content }}
+  </div>
+</article>
