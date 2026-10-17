@@ -2,6 +2,7 @@
   const dialog = document.querySelector('#easter-egg-dialog');
   if (!dialog || typeof dialog.showModal !== 'function') return;
   const image = dialog.querySelector('img');
+  const caption = dialog.querySelector('.photo-dialog__caption');
   if (!image) return;
 
   document.querySelectorAll('a[aria-controls="easter-egg-dialog"]').forEach((trigger) => {
@@ -11,7 +12,13 @@
       dialog.dataset.instant = String(event.detail === 0);
       image.src = trigger.href;
       image.alt = trigger.dataset.photoAlt || 'A photo from Raphaël’s collection';
-      dialog.setAttribute('aria-label', trigger.dataset.photoAlt ? 'Cat photo' : 'Hidden photo');
+      const name = trigger.dataset.photoCaption || '';
+      if (caption) {
+        caption.textContent = name;
+        caption.hidden = !name;
+      }
+      dialog.dataset.hasCaption = String(Boolean(name));
+      dialog.setAttribute('aria-label', name ? `${name} — cat photo` : 'Hidden photo');
       if (!dialog.open) dialog.showModal();
     });
   });

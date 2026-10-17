@@ -40,10 +40,11 @@
     <dialog id="easter-egg-dialog" class="photo-dialog" aria-label="Hidden photo">
       <form method="dialog">
         <button class="photo-dialog__close" aria-label="Close photo" autofocus>
-          <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg>
+          <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg>
         </button>
       </form>
       <img src="{{ '/images/cathy.jpg' | relative_url }}" alt="A photo from Raphaël’s collection" loading="lazy" width="3024" height="4032">
+      <p class="photo-dialog__caption" hidden></p>
     </dialog>
     <script src="{{ '/assets/js/easter-egg.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   </body>

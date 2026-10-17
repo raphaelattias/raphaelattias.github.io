@@ -1,27 +1,31 @@
 :root {
   color-scheme: light;
-  --site-background: #ffffff;
-  --site-text: #3f3f46;
-  --site-heading: #18181b;
-  --site-muted: #71717a;
-  --site-border: #e4e4e7;
-  --site-code-background: #f4f4f5;
-  --site-focus: #2563eb;
-  --site-selection: #dce5d9;
+  --site-background: #faf9f6;
+  --site-text: #45463f;
+  --site-heading: #10110f;
+  --site-muted: #6e6e68;
+  --site-border: #e2e0d8;
+  --site-code-background: #f0eee7;
+  --site-focus: #718a73;
+  --site-link-hover: #4f6952;
+  --site-link-underline: #b8c5b5;
+  --site-selection: #dce6d7;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --site-background: #09090b;
-    --site-text: #d4d4d8;
-    --site-heading: #fafafa;
-    --site-muted: #a1a1aa;
-    --site-border: #27272a;
-    --site-code-background: #18181b;
-    --site-focus: #93c5fd;
-    --site-selection: #344638;
+    --site-background: #191814;
+    --site-text: #dfd9cb;
+    --site-heading: #faf8f0;
+    --site-muted: #aaa393;
+    --site-border: #3c3a32;
+    --site-code-background: #25231d;
+    --site-focus: #a8c4a5;
+    --site-link-hover: #a8c4a5;
+    --site-link-underline: #718a73;
+    --site-selection: #3e5140;
   }
 }
 
@@ -287,11 +291,14 @@ select:focus-visible {
 .prose a {
   color: var(--site-heading);
   font-weight: 500;
-  text-decoration-color: var(--site-border);
+  text-decoration-color: var(--site-link-underline);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
 }
 
 .prose a:hover {
-  color: var(--site-muted);
+  color: var(--site-link-hover);
   text-decoration-color: currentColor;
 }
 
@@ -727,9 +734,10 @@ html:has(.photo-dialog[open]) {
 .photo-dialog {
   max-width: calc(100vw - 32px);
   max-height: calc(100svh - 32px);
-  padding: 0;
+  padding: 8px;
+  overflow: hidden;
   border: 0;
-  border-radius: 8px;
+  border-radius: 16px;
   background: var(--site-background);
   opacity: 0;
   transform: scale(0.97);
@@ -746,7 +754,7 @@ html:has(.photo-dialog[open]) {
 }
 
 .photo-dialog::backdrop {
-  background: rgb(0 0 0 / 70%);
+  background: rgb(67 53 38 / 74%);
   opacity: 0;
   transition:
     opacity 240ms var(--ease-out),
@@ -794,26 +802,61 @@ html:has(.photo-dialog[open]) {
   display: block;
   width: auto;
   height: auto;
-  max-width: min(720px, calc(100vw - 32px));
-  max-height: calc(100svh - 32px);
+  max-width: min(720px, calc(100vw - 48px));
+  max-height: calc(100svh - 48px);
+  border-radius: 12px;
   object-fit: contain;
 }
 
 .photo-dialog__close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 16px;
+  right: 16px;
   display: grid;
   place-items: center;
   width: 44px;
   height: 44px;
   padding: 0;
-  border: 0;
+  border: 1px solid color-mix(in srgb, var(--site-heading) 14%, transparent);
   border-radius: 50%;
-  background: rgb(0 0 0 / 65%);
-  color: white;
+  background: color-mix(in srgb, var(--site-background) 94%, transparent);
+  color: var(--site-heading);
+  box-shadow: 0 2px 12px rgb(16 17 15 / 12%);
+  transition: background-color 120ms ease, border-color 120ms ease;
   font: 28px/1 Helvetica, Arial, sans-serif;
   cursor: pointer;
+}
+
+.photo-dialog__close:hover {
+  background: var(--site-background);
+  border-color: var(--site-focus);
+}
+
+.photo-dialog__close:focus-visible {
+  outline-offset: 2px;
+}
+
+.photo-dialog[data-has-caption="true"] {
+  padding-bottom: 0;
+}
+
+.photo-dialog[data-has-caption="true"] img {
+  max-height: calc(100svh - 104px);
+}
+
+.photo-dialog__caption {
+  margin: 0;
+  padding: 10px 4px 12px;
+  color: var(--site-muted);
+  font-size: 14px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .photo-dialog::backdrop {
+    background: rgb(35 28 22 / 82%);
+  }
 }
 
 /* A short, page-load entrance for the homepage biography. */
