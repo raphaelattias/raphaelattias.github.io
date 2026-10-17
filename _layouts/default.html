@@ -10,7 +10,7 @@
     {% assign feed_path = site.atom_feed.path | default: '/feed.xml' %}
     <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }} Feed" href="{{ feed_path | relative_url }}">
     <link rel="icon" href="{{ "/assets/favicon.svg" | relative_url }}" type="image/svg+xml">
-    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   </head>
 
   <body>

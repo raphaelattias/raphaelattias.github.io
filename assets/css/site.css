@@ -728,10 +728,59 @@ html:has(.photo-dialog[open]) {
   border: 0;
   border-radius: 8px;
   background: var(--site-background);
+  opacity: 0;
+  transform: scale(0.97);
+  transition:
+    opacity 240ms var(--ease-out),
+    transform 240ms var(--ease-out),
+    display 240ms allow-discrete,
+    overlay 240ms allow-discrete;
+}
+
+.photo-dialog[open] {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .photo-dialog::backdrop {
   background: rgb(0 0 0 / 70%);
+  opacity: 0;
+  transition:
+    opacity 240ms var(--ease-out),
+    display 240ms allow-discrete,
+    overlay 240ms allow-discrete;
+}
+
+.photo-dialog[open]::backdrop {
+  opacity: 1;
+}
+
+@starting-style {
+  .photo-dialog[open] {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  .photo-dialog[open]::backdrop {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-dialog,
+  .photo-dialog::backdrop {
+    transition-duration: 100ms !important;
+  }
+
+  .photo-dialog {
+    transform: none !important;
+  }
+}
+
+/* Keyboard actions should open and dismiss the photo immediately. */
+.photo-dialog[data-instant="true"],
+.photo-dialog[data-instant="true"]::backdrop {
+  transition: none !important;
 }
 
 .photo-dialog form {
